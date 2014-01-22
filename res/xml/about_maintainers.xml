@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:crom="http://schemas.android.com/apk/res/com.crom.tools">
+
+       <PreferenceScreen
+           android:key="maintainers_summary"
+           android:layout="@layout/maintainers_summary" />
+
+        <!-- How to add yourself
+         *  your name > crom:nameDev
+         *  what device you're maintaining > crom:statusDev
+         *  your google profile id (not custom url) and picture > crom:googleHandle
+         *  your github > crom:githubLink
+         *  your email > crom:emailDev
+         *  your twitter > crom:twitterLink
+         **   simple as one two and three
+        -->
+
+        <com.crom.about.widget.DeveloperPreference
+            crom:nameDev="aways"
+            crom:statusDev="Device: -"
+            crom:googleHandle="112103389398481585584"
+            crom:githubLink="http://github.com/aways"
+            crom:emailDev="mehmetsanok@gmail.com"
+            crom:twitterLink="CRoM_BeaN" />
+
+</PreferenceScreen>

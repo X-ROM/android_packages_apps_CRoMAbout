@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="card_pressed">#7E0099CC</color>
+    <color name="card_gray">#DEDEDE</color>
+    <color name="card_unpressed">#1F1F1F</color>
+
+    <color name="crom_grey">#ff1d1d1d</color>
+    <color name="crom_grey2">#ff181818</color>
+
+</resources>
