@@ -10,7 +10,7 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-v4 \
     android-support-v13
 
-LOCAL_PACKAGE_NAME := CromAbout
+LOCAL_PACKAGE_NAME := CRoMAbout
 
 include $(BUILD_PACKAGE)
 
