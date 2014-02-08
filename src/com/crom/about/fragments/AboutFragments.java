@@ -44,7 +44,7 @@ public class AboutFragments extends Fragment {
         aboutTitle.append(" C-RoM ");
 
         TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
-        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_carbon));
+        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_crom));
 
         Button btnDonate = (Button) aboutView.findViewById(R.id.btn_donate);
         btnDonate.setOnClickListener(new View.OnClickListener() {
