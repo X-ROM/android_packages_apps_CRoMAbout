@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:crom="http://schemas.android.com/apk/res/com.crom.tools">
-
-       <PreferenceScreen
-           android:key="maintainers_summary"
-           android:layout="@layout/maintainers_summary" />
+    xmlns:crom="http://schemas.android.com/apk/res/com.crom.about">
 
         <!-- How to add yourself
          *  your name > crom:nameDev
@@ -18,11 +14,10 @@
         -->
 
         <com.crom.about.widget.DeveloperPreference
-            crom:nameDev="aways"
-            crom:statusDev="Device: -"
-            crom:googleHandle="112103389398481585584"
-            crom:githubLink="http://github.com/aways"
-            crom:emailDev="mehmetsanok@gmail.com"
-            crom:twitterLink="CRoM_BeaN" />
+            crom:nameDev="droidjam"
+            crom:deviceStat="Nexus 4 (mako)"
+            crom:googleHandle="101891874131763807773"
+            crom:githubLink="http://github.com/droidjam"
+            crom:emailDev="droidjem@gmail.com" />
 
 </PreferenceScreen>

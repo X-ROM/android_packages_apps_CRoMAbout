@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 Carbon Development
+<!-- Copyright (C) 2014 Carbon Development
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="app_name">About Carbon</string>
+    <string name="app_name">About C-RoM</string>
     <string name="maintainers_title">Maintainers</string>
     <string name="maintainers_version_text">listed in no particular order</string>
     <string name="finish_button_text">Finish</string>
@@ -27,23 +27,19 @@
     <!-- Tabs -->
     <string name="about_title">About</string>
     <string name="features_title">Features</string>
-    <string name="carbon_main_members">The Team</string>
-    <string name="carbon_maintainers">Maintainers</string>
-    <string name="carbon_team">Team Meetup</string>
+    <string name="crom_main_members">Core Team</string>
+    <string name="crom_maintainers">Maintainers</string>
+    <string name="crom_team">Team Meetup</string>
 
-    <string name="carbon_core_summary">Core Members</string>
-    <string name="carbon_designers_summary">Carbon Designers</string>
-    <string name="carbon_maintainers_summary">Carbon Maintainers</string>
-    <string name="carbon_pr_summary">Carbon Public Relations</string>
-
-    <!-- Carbon Team -->
-    <string name="carbon_title">Carbon Team</string>
-    <string name="carbon_version_text"></string>
+    <!-- C-RoM Team -->
+    <string name="crom_title">C-RoM Team</string>
+    <string name="crom_version_text"></string>
 
     <!-- Drawer dependency -->
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_toggle">Toggle Drawer</string>
+    <string name="toggle_back_cfibers">Back</string>
 
     <!-- Layout dev_card strings -->
     <string name="donate">Donate</string>
@@ -58,4 +54,8 @@
     <string name="status_gerrit">Gerrit Maintainer</string>
     <string name="status_core_dev">Core Developer</string>
     <string name="status_dev_and_co_founder">Developer / Co-Founder</string>
+
+    <!-- URLs -->
+    <string name="cr_website_title">Visit our website</string>
+    <string name="cr_donate_title">Donate to C-RoM</string>
 </resources>

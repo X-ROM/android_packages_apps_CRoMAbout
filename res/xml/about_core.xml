@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:crom="http://schemas.android.com/apk/res/com.crom.tools">
-
-       <PreferenceScreen
-           android:key="core_summary"
-           android:layout="@layout/core_summary" />
+    xmlns:crom="http://schemas.android.com/apk/res/com.crom.about">
 
         <com.crom.about.widget.DeveloperPreference
             crom:nameDev="aways"
-            crom:statusDev="@string/status_dev"
+            crom:deviceStat="Galaxy S I9000(galaxysmtd), I9505(jfltexx)"
             crom:googleHandle="112103389398481585584"
             crom:githubLink="http://github.com/aways"
-            crom:emailDev="mehmetsanok@gmail.com" />
+            crom:emailDev="mehmetsanok@gmail.com"
+            crom:twitterLink="CRoM_BeaN" />
+
 </PreferenceScreen>

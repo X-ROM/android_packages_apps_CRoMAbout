@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2012 Crossbones Software
- * This code has been modified.  Portions copyright (C) 2013, Dirty Unicorns Project.
+ * This code has been modified.  Portions copyright (C) 2014, Dirty Unicorns Project.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,18 +18,12 @@
 package com.crom.about;
 
 import android.content.Context;
-import android.os.SystemProperties;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 public class Utils {
-
-    public static String getCromVersion() {
-        String version = SystemProperties.get("ro.romstats.name");
-        return version;
-    }
 
     public static String readRawFile(Context context, int resource) {
         InputStream inputStream = context.getResources().openRawResource(resource);

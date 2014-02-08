@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2012 Crossbones Software
  * This code has been modified.  Portions copyright (C) 2013, Carbon Development
+ * This code has been modified.  Portions copyright (C) 2014 C-RoM Development
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,12 +18,14 @@
 
 package com.crom.about.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.crom.about.activities.AboutActivity;
@@ -38,11 +41,34 @@ public class AboutFragments extends Fragment {
         View aboutView = inflater.inflate(R.layout.about_fragment, container, false);
 
         TextView aboutTitle = (TextView) aboutView.findViewById(R.id.about_title);
-        String version =  Utils.getCromVersion();
-        aboutTitle.append(" Crom ");
+        aboutTitle.append(" C-RoM ");
 
         TextView aboutText = (TextView) aboutView.findViewById(R.id.about);
-        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_crom));
+        aboutText.setText(Utils.readRawFile(AboutActivity.appContext, R.raw.about_carbon));
+
+        Button btnDonate = (Button) aboutView.findViewById(R.id.btn_donate);
+        btnDonate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri donateURL = Uri.parse("https://www.paypal.com/de/cgi-bin/webscr?cmd=_flow&SESSION=I69ze2y6rCud4k8HkAAJIIz_NPxJ8tL5s7KTOEskjpNjOcmsSA54I3aHUDC&dispatch=5885d80a13c0db1f8e263663d3faee8d7ff5e1e81f2ed97dd1e90bd72966c40c");
+                final Intent donIntent = new Intent(Intent.ACTION_VIEW, donateURL);
+                donIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(donIntent);
+            }
+        });
+
+        Button btnWebsite = (Button) aboutView.findViewById(R.id.btn_website);
+        btnWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri webURL = Uri.parse("http://c-rom.org");
+                final Intent webIntent = new Intent(Intent.ACTION_VIEW, webURL);
+                webIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(webIntent);
+            }
+        });
+
+
 
         return aboutView;
     }

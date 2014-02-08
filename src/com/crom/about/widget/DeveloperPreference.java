@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2012 Android Open Kang Project
  * This code has been modified.  Portions copyright (C) 2013 Carbon Development
+ * This code has been modified.  Portions copyright (C) 2014 C-RoM Development
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,8 +60,10 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
     private Drawable devIcon;
     private TextView devName;
     private TextView devStatus;
+    private TextView devDeviceStat;
 
     private String nameDev;
+    private String deviceStat;
     private String statusDev;
     private String emailDev;
     private String googleHandle;
@@ -91,6 +94,7 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
             devIcon = typedArray.getDrawable(R.styleable.DeveloperPreference_devIcon);
             devUrl = typedArray.getString(R.styleable.DeveloperPreference_devUrl);
             emailDev = typedArray.getString(R.styleable.DeveloperPreference_emailDev);
+            deviceStat = typedArray.getString(R.styleable.DeveloperPreference_deviceStat);
         } finally {
             if (typedArray != null) {
                 typedArray.recycle();
@@ -106,6 +110,7 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
         View layout = View.inflate(getContext(), R.layout.dev_card, null);
         devName = (TextView) layout.findViewById(R.id.name);
         devStatus = (TextView) layout.findViewById(R.id.status);
+        devDeviceStat = (TextView) layout.findViewById(R.id.device_status);
         photoView = (ImageView) layout.findViewById(R.id.photo);
         popupMenuButton = (ImageView) layout.findViewById(R.id.anchor);
         popupMenu = new PopupMenu(getContext(), popupMenuButton);
@@ -154,7 +159,17 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
         popupMenu.setOnMenuItemClickListener(this);
 
         devName.setText(nameDev);
-        devStatus.setText(statusDev);
+        if (statusDev != null) {
+            devStatus.setText(statusDev);
+        } else {
+            devStatus.setVisibility(View.GONE);
+        }
+        if (deviceStat != null) {
+            final String device = "Device: " + deviceStat;
+            devDeviceStat.setText(device);
+        } else {
+            devDeviceStat.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -176,7 +191,7 @@ public class DeveloperPreference extends Preference implements OnMenuItemClickLi
                 getContext().startActivity(emaintent);
                 break;
             case MENU_GOOGLEPLUS:
-                Uri gplusURL = Uri.parse("https://plus.google.com/u/0/" + googleHandle);
+                Uri gplusURL = Uri.parse("https://plus.google.com/u/0/" + googleHandle + "/about");
                 final Intent gpintent = new Intent(Intent.ACTION_VIEW, gplusURL);
                 gpintent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 getContext().startActivity(gpintent);
