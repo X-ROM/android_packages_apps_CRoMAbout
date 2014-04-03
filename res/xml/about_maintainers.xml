@@ -20,4 +20,12 @@
             crom:githubLink="http://github.com/droidjam"
             crom:emailDev="droidcem@gmail.com" />
 
+        <com.crom.about.widget.DeveloperPreference
+            crom:nameDev="vocoderism"
+            crom:deviceStat="Moto G (Falcon)"
+            crom:googleHandle="115407279082989385907"
+            crom:githubLink="http://github.com/vocoderism"
+            crom:emailDev="davide.franzino@gmail.com"
+            crom:twitterLink="vocoderism" />
+
 </PreferenceScreen>
