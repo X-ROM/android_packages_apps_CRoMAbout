@@ -31,9 +31,9 @@
 
         <com.crom.about.widget.DeveloperPreference
             crom:nameDev="3andala"
-            crom:deviceStat="Xperia Arc (Anzu)"
+            crom:deviceStat="Xperia Arc, Arc S (Anzu)"
             crom:googleHandle="108973911035592689920"
             crom:githubLink="http://github.com/3andala"
-            crom:emailDev="love3andala@gmail.com"
+            crom:emailDev="love3andala@gmail.com" />
             
 </PreferenceScreen>
