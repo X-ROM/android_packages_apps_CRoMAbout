@@ -21,6 +21,13 @@
             crom:emailDev="droidcem@gmail.com" />
 
         <com.crom.about.widget.DeveloperPreference
+            crom:nameDev="TheDarkDefender"
+            crom:deviceStat="Nexus 7 2013 (flo)"
+            crom:googleHandle="117421397767192393992"
+            crom:githubLink="http://github.com/dexmc"
+            crom:emailDev="dextermcdew@gmail.com" />
+
+        <com.crom.about.widget.DeveloperPreference
             crom:nameDev="vocoderism"
             crom:deviceStat="Moto G (Falcon)"
             crom:googleHandle="115407279082989385907"
